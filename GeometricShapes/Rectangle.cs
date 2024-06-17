@@ -12,7 +12,7 @@ namespace GeometricShapes
         {
             return Side1 * Side2;
         }
-        public Rectangle(int side1, int side2) : base(side1, side2, side1, side2)
+        public Rectangle(int side1, int side2) : base(side1, side2, side1, side2) //base parameters come from the constructer being inherited from(in this case its Quad)
         {
             Side1 = side1;
             Side2 = side2;

@@ -6,22 +6,13 @@ using System.Threading.Tasks;
 
 namespace GeometricShapes
 {
-    internal class Rectangle
-    {
-        public int Side1 { get; set; } = 0;
-        public int Side2 { get; set; } = 0;
-
-        public int Perimeter()
-        {
-            return 2 * (Side1 + Side2);
-        }
-
-        public int Area()
+    internal class Rectangle : Quad
+    { 
+        public new int Area()   //new indicates to Pull from Rectangle and not the Quad class
         {
             return Side1 * Side2;
         }
-
-        public Rectangle(int side1, int side2)
+        public Rectangle(int side1, int side2) : base(side1, side2, side1, side2)
         {
             Side1 = side1;
             Side2 = side2;
